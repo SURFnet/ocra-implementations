@@ -30,10 +30,14 @@ implementation against the test vectors from the RFC.
 # CREDITS 
 
 This project was initiated by SURFnet and developed by Egeniq. 
+
 The Java and Objective-c versions were updated from draft-13 to the final RFC
 specification with support from Innovation District.
 
-SURFnet and Egeniq are not affiliated with the OATH consortium.
+The PHP version received bugfix contributions from Andjelko Horvat.
 
 * http://www.surfnet.nl
 * http://www.egeniq.com
+
+Disclaimer: SURFnet and Egeniq are not affiliated with the OATH consortium.
+
