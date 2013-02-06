@@ -1,63 +1,0 @@
-10
-
-dir
-0
-https://ocra-implementations.googlecode.com/svn/trunk/objective-c/ocra/ocratest
-https://ocra-implementations.googlecode.com/svn
-add
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3b624743-f1d6-f066-5061-f183663fc85a
-
-OcraTests.m
-file
-
-
-
-add
-
-en.lproj
-dir
-
-
-
-add
-
-ocratest-Info.plist
-file
-
-
-
-add
-
-ocratest-Prefix.pch
-file
-
-
-
-add
-
-OcraTests.h
-file
-
-
-
-add
-
