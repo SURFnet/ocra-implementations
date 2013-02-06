@@ -11,12 +11,12 @@ INFO
 This project contains example implementations of the OATH OCRA Challenge 
 Response algorithm for various languages.
 
-All of the implementations are initially based on the reference 
-implementation from version 13 of the draft.
+All of the implementations are  based on the reference 
+implementation from the OCRA RFC
 
-The current draft of the OCRA standard:
+The current version of the OCRA standard:
 
-http://tools.ietf.org/html/draft-mraihi-mutual-oath-hotp-variants-13
+http://tools.ietf.org/html/rfc6287
 
 Versions currently exist for:
 
@@ -24,7 +24,7 @@ Versions currently exist for:
 * Objective-C
 * PHP
 
-Each of these come with a simplistic rudimentary unit test.
+Each of these come with a unit test.
 
 This project was initiated by SURFnet and developed by Egeniq. 
 SURFnet and Egeniq are not affiliated with the OATH consortium.
