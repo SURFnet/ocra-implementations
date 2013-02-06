@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9208D20E16C13775004DA6D5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9208D20D16C13775004DA6D5 /* SenTestingKit.framework */; };
+		9208D21016C13775004DA6D5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9208D20F16C13775004DA6D5 /* Cocoa.framework */; };
+		9208D21A16C13775004DA6D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9208D21816C13775004DA6D5 /* InfoPlist.strings */; };
+		9208D22416C137C4004DA6D5 /* OcraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9208D22316C137C4004DA6D5 /* OcraTests.m */; };
+		9208D22816C137E5004DA6D5 /* OCRA.m in Sources */ = {isa = PBXBuildFile; fileRef = 9208D22616C137E5004DA6D5 /* OCRA.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9208D20A16C13775004DA6D5 /* ocratest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ocratest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9208D20D16C13775004DA6D5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9208D20F16C13775004DA6D5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		9208D21216C13775004DA6D5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9208D21316C13775004DA6D5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9208D21416C13775004DA6D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9208D21716C13775004DA6D5 /* ocratest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ocratest-Info.plist"; sourceTree = "<group>"; };
+		9208D21916C13775004DA6D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9208D21E16C13775004DA6D5 /* ocratest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ocratest-Prefix.pch"; sourceTree = "<group>"; };
+		9208D22216C137C4004DA6D5 /* OcraTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OcraTests.h; sourceTree = "<group>"; };
+		9208D22316C137C4004DA6D5 /* OcraTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OcraTests.m; sourceTree = "<group>"; };
+		9208D22616C137E5004DA6D5 /* OCRA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCRA.m; path = ../OCRA.m; sourceTree = "<group>"; };
+		9208D22716C137E5004DA6D5 /* OCRA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCRA.h; path = ../OCRA.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9208D20616C13775004DA6D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9208D20E16C13775004DA6D5 /* SenTestingKit.framework in Frameworks */,
+				9208D21016C13775004DA6D5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9208D1FE16C136AE004DA6D5 = {
+			isa = PBXGroup;
+			children = (
+				9208D22516C137D3004DA6D5 /* External */,
+				9208D21516C13775004DA6D5 /* OCRAtest */,
+				9208D20C16C13775004DA6D5 /* Frameworks */,
+				9208D20B16C13775004DA6D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9208D20B16C13775004DA6D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9208D20A16C13775004DA6D5 /* ocratest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9208D20C16C13775004DA6D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9208D20D16C13775004DA6D5 /* SenTestingKit.framework */,
+				9208D20F16C13775004DA6D5 /* Cocoa.framework */,
+				9208D21116C13775004DA6D5 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9208D21116C13775004DA6D5 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9208D21216C13775004DA6D5 /* AppKit.framework */,
+				9208D21316C13775004DA6D5 /* CoreData.framework */,
+				9208D21416C13775004DA6D5 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9208D21516C13775004DA6D5 /* OCRAtest */ = {
+			isa = PBXGroup;
+			children = (
+				9208D22216C137C4004DA6D5 /* OcraTests.h */,
+				9208D22316C137C4004DA6D5 /* OcraTests.m */,
+				9208D21616C13775004DA6D5 /* Supporting Files */,
+			);
+			name = OCRAtest;
+			path = ocratest;
+			sourceTree = "<group>";
+		};
+		9208D21616C13775004DA6D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9208D21716C13775004DA6D5 /* ocratest-Info.plist */,
+				9208D21816C13775004DA6D5 /* InfoPlist.strings */,
+				9208D21E16C13775004DA6D5 /* ocratest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9208D22516C137D3004DA6D5 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				9208D22616C137E5004DA6D5 /* OCRA.m */,
+				9208D22716C137E5004DA6D5 /* OCRA.h */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9208D20916C13775004DA6D5 /* ocratest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9208D21F16C13775004DA6D5 /* Build configuration list for PBXNativeTarget "ocratest" */;
+			buildPhases = (
+				9208D20516C13775004DA6D5 /* Sources */,
+				9208D20616C13775004DA6D5 /* Frameworks */,
+				9208D20716C13775004DA6D5 /* Resources */,
+				9208D20816C13775004DA6D5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ocratest;
+			productName = ocratest;
+			productReference = 9208D20A16C13775004DA6D5 /* ocratest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9208D1FF16C136AE004DA6D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 9208D20216C136AE004DA6D5 /* Build configuration list for PBXProject "ocra" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9208D1FE16C136AE004DA6D5;
+			productRefGroup = 9208D20B16C13775004DA6D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9208D20916C13775004DA6D5 /* ocratest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9208D20716C13775004DA6D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9208D21A16C13775004DA6D5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9208D20816C13775004DA6D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9208D20516C13775004DA6D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9208D22416C137C4004DA6D5 /* OcraTests.m in Sources */,
+				9208D22816C137E5004DA6D5 /* OCRA.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9208D21816C13775004DA6D5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9208D21916C13775004DA6D5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9208D20316C136AE004DA6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		9208D20416C136AE004DA6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		9208D22016C13775004DA6D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ocratest/ocratest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ocratest/ocratest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9208D22116C13775004DA6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ocratest/ocratest-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ocratest/ocratest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9208D20216C136AE004DA6D5 /* Build configuration list for PBXProject "ocra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9208D20316C136AE004DA6D5 /* Debug */,
+				9208D20416C136AE004DA6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9208D21F16C13775004DA6D5 /* Build configuration list for PBXNativeTarget "ocratest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9208D22016C13775004DA6D5 /* Debug */,
+				9208D22116C13775004DA6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9208D1FF16C136AE004DA6D5 /* Project object */;
+}
