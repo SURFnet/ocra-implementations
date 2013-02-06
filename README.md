@@ -3,8 +3,9 @@
 The files in this library are licensed according to the new BSD license, a 
 copy of which can be found in the LICENSE file.
 
-An exception is the java implementation, which is taken directly from the 
-reference implementation but included for convenience.
+An exception is the java implementation, which is taken from the 
+reference implementation and only slightly modified (to be more production system 
+suitable).
 
 # INFO
 
