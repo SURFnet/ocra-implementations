@@ -92,53 +92,89 @@ class OCRA {
         $sessionInformationLength = 0;
         $timeStampLength = 0;
 
-        if(stripos($ocraSuite, "sha1")!==false)
-            $crypto = "sha1";
-        if(stripos($ocraSuite, "sha256")!==false)
-            $crypto = "sha256";
-        if(stripos($ocraSuite, "sha512")!==false)
-            $crypto = "sha512";
-
         // How many digits should we return
-        $oS = substr($ocraSuite, strpos($ocraSuite, ":")+1, strpos($ocraSuite, ":", strpos($ocraSuite, ":")+1) -strpos($ocraSuite, ":")-1);
-        $codeDigits = substr($oS, strrpos($oS, "-")+1);
+        $components = explode(":", $ocraSuite);
+        $cryptoFunction = $components[1];
+        $dataInput = strtolower($components[2]); // lower here so we can do case insensitive comparisons
         
+        if(stripos($cryptoFunction, "sha1")!==false)
+            $crypto = "sha1";
+        if(stripos($cryptoFunction, "sha256")!==false)
+            $crypto = "sha256";
+        if(stripos($cryptoFunction, "sha512")!==false)
+            $crypto = "sha512";
+        
+        $codeDigits = substr($cryptoFunction, strrpos($cryptoFunction, "-")+1);
+                
         // The size of the byte array message to be encrypted
         // Counter
-        if(stripos($ocraSuite, ":c") !==false) {
+        if($dataInput[0] == "c" ) {
             // Fix the length of the HEX string
             while(strlen($counter) < 16)
                 $counter = "0" . $counter;
             $counterLength=8;
         }
         // Question
-        if(stripos($ocraSuite, ":q")!==false ||
-                stripos($ocraSuite, "-q")!==false) {
+        if($dataInput[0] == "q" ||
+                stripos($dataInput, "-q")!==false) {
             while(strlen($question) < 256)
                 $question = $question . "0";
             $questionLength=128;
         }
 
         // Password
-        if(stripos($ocraSuite, ":p")!==false ||
-                stripos($ocraSuite, "-p") !==false) {
+        if(stripos($dataInput, "psha1")!==false) {
             while(strlen($password) < 40)
                 $password = "0" . $password;
             $passwordLength=20;
         }
-
+    
+        if(stripos($dataInput, "psha256")!==false) {
+            while(strlen($password) < 64)
+                $password = "0" . $password;
+            $passwordLength=32;
+        }
+        
+        if(stripos($dataInput, "psha512")!==false) {
+            while(strlen($password) < 128)
+                $password = "0" . $password;
+            $passwordLength=64;
+        }
+        
         // sessionInformation
-        if(stripos($ocraSuite, ":s") !==false ||
-                stripos($ocraSuite, "-s", strpos($ocraSuite, ":", strpos($ocraSuite, ":")+1)) !== false) {
+        if(stripos($dataInput, "s064") !==false) {
             while(strlen($sessionInformation) < 128)
                 $sessionInformation = "0" . $sessionInformation;
 
             $sessionInformationLength=64;
         }
+        
+        if(stripos($dataInput, "s128") !==false) {
+            while(strlen($sessionInformation) < 256)
+                $sessionInformation = "0" . $sessionInformation;
+        
+            $sessionInformationLength=128;
+        }
+        
+        if(stripos($dataInput, "s256") !==false) {
+            while(strlen($sessionInformation) < 512)
+                $sessionInformation = "0" . $sessionInformation;
+        
+            $sessionInformationLength=256;
+        }
+        
+        if(stripos($dataInput, "s512") !==false) {
+            while(strlen($sessionInformation) < 128)
+                $sessionInformation = "0" . $sessionInformation;
+        
+            $sessionInformationLength=64;
+        }
+        
+        
              
         // TimeStamp
-        if(stripos($ocraSuite, ":t") !==false ||
-                stripos($ocraSuite, "-t") !== false) {
+        if($dataInput[0] == "t" ||
+                stripos($dataInput, "-t") !== false) {
             while(strlen($timeStamp) < 16)
                 $timeStamp = "0" . $timeStamp;
             $timeStampLength=8;
@@ -195,7 +231,7 @@ class OCRA {
         // Put the bytes of "time" to the message
         // Input is text value of minutes
         if($timeStampLength > 0){
-            $bArray = self::_hexStr2Bytes($timestamp);
+            $bArray = self::_hexStr2Bytes($timeStamp);
             for ($i=0;$i<strlen($bArray);$i++) {
                 $msg [$i + $ocraSuiteLength + 1 + $counterLength + $questionLength + $passwordLength + $sessionInformationLength] = $bArray[$i];
             }
@@ -215,7 +251,7 @@ class OCRA {
     /**
      * Truncate a result to a certain length
      */    
-    function _oath_truncate($hash, $length = 6)
+    static function _oath_truncate($hash, $length = 6)
     {
         // Convert to dec
         foreach(str_split($hash,2) as $hex)
@@ -224,16 +260,17 @@ class OCRA {
         }
     
         // Find offset
-        $offset = $hmac_result[19] & 0xf;
+        $offset = $hmac_result[count($hmac_result) - 1] & 0xf;
     
-        // Algorithm from RFC
-        return
-        (
+        $v = strval(
             (($hmac_result[$offset+0] & 0x7f) << 24 ) |
             (($hmac_result[$offset+1] & 0xff) << 16 ) |
             (($hmac_result[$offset+2] & 0xff) << 8 ) |
             ($hmac_result[$offset+3] & 0xff)
-        ) % pow(10,$length);
+        );	
+        
+        $v = substr($v, strlen($v) - $length);
+        return $v;
     }
     
 }
