@@ -1,7 +1,7 @@
 /**
  * This file is part of the ocra-implementations package.
  *
- * More information: http://code.google.com/p/ocra-implementations/
+ * More information: https://github.com/SURFnet/ocra-implementations/
  *
  * @author Ivo Jansch <ivo@egeniq.com>
  * 
